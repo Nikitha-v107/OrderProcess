@@ -1,0 +1,54 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="hero-section text-white text-center py-5">
+    <div class="container py-5">
+        <h1 class="display-4 fw-bold mb-3">Welcome to the Product Catalogue</h1>
+        <p class="lead mb-4">Browse products, place orders, and track your purchases easily.</p>
+        <a asp-page="/Products/Index" class="btn btn-primary btn-lg me-3">View Products</a>
+        <a asp-page="/Orders/Create" class="btn btn-secondary btn-lg">Place an Order</a>
+    </div>
+</div>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Features at a Glance</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100 shadow-sm rounded-3 feature-card">
+                <div class="card-body text-center">
+                    <div class="feature-icon mb-3">🛍️</div>
+                    <h5 class="card-title">Browse Products</h5>
+                    <p class="card-text">Explore a variety of high-quality products.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm rounded-3 feature-card">
+                <div class="card-body text-center">
+                    <div class="feature-icon mb-3">🧾</div>
+                    <h5 class="card-title">Easy Ordering</h5>
+                    <p class="card-text">Place secure and fast orders with one click.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm rounded-3 feature-card">
+                <div class="card-body text-center">
+                    <div class="feature-icon mb-3">🚚</div>
+                    <h5 class="card-title">Real-time Processing</h5>
+                    <p class="card-text">Orders are sent instantly via Azure Service Bus.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5 py-4 about-section">
+    <h2 class="text-center mb-4">Why Choose Us?</h2>
+    <p class="lead text-center px-lg-5">
+        Our system is built on modern and robust technologies, leveraging ASP.NET Core Razor Pages for a dynamic user experience, Azure SQL Database for reliable data storage, and Azure Service Bus for efficient, real-time order processing. We also utilize Azure Functions for scalable backend operations, ensuring a seamless and high-performance solution.
+    </p>
+</div>

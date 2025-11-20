@@ -1,0 +1,88 @@
+﻿
+/* Simple modal styles - scoped to this page */
+.pc-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1050;
+    align-items: center;
+    justify-content: center;
+}
+
+.pc-modal-overlay.show {
+    display: flex;
+}
+
+.pc-modal-dialog {
+    background: #fff;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.pc-modal-header, .pc-modal-footer {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pc-modal-header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.pc-modal-body {
+    padding: 16px;
+}
+
+.pc-modal-close {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.pc-form-row {
+    margin-bottom: 10px;
+}
+
+    .pc-form-row label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+    }
+
+    .pc-form-row input[type="text"],
+    .pc-form-row input[type="number"],
+    .pc-form-row textarea,
+    .pc-form-row input[type="email"] {
+        width: 100%;
+        padding: 8px 10px;
+        border: 1px solid #cfcfcf;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+.pc-modal-footer {
+    border-top: 1px solid #e5e5e5;
+    gap: 8px;
+}
+
+.pc-actions {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+}
+
+@media (max-width: 480px) {
+    .pc-modal-dialog {
+        margin: 0 12px;
+    }
+}
+
+

@@ -1,0 +1,87 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.hero-section {
+    background: linear-gradient(#2563eb, #1e40af);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section .container {
+    max-width: 900px; /* Adjust as needed for hero content */
+}
+
+.hero-section h1 {
+    font-size: 3.5rem; /* Larger headline for hero */
+    margin-bottom: 1rem;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.feature-card {
+    border: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.feature-icon {
+    font-size: 3rem; /* Size of the emoji icons */
+    line-height: 1;
+}
+
+/* Ensure footer styling matches if not already covered by bootstrap classes */
+.footer {
+    background-color: #343a40 !important; /* Dark background for footer */
+    color: #f8f9fa !important; /* Light text for footer */
+    padding: 1.5rem 0; /* Vertical padding */
+}
+
+/* Global container styling */
+.container {
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+    .hero-section .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

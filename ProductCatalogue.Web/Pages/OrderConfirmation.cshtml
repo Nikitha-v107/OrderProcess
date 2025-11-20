@@ -1,0 +1,26 @@
+@page "{orderId:int}"
+@model ProductCatalogue.Web.Pages.OrderConfirmationModel
+@{
+    ViewData["Title"] = "Order Confirmation";
+}
+
+<h1>Order Confirmation</h1>
+
+@if (Model.OrderId > 0)
+{
+    <div class="alert alert-success" role="alert">
+        Your order with ID <strong>@Model.OrderId</strong> has been placed successfully!
+        We will process your order shortly.
+    </div>
+    <p>Thank you for your purchase!</p>
+}
+else
+{
+    <div class="alert alert-danger" role="alert">
+        There was an issue processing your order. Please try again.
+    </div>
+}
+
+<div>
+    <a asp-page="/Products">Continue Shopping</a>
+</div>

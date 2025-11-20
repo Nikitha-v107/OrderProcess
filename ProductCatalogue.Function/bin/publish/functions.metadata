@@ -1,0 +1,32 @@
+[
+  {
+    "name": "ProcessOrderFunction",
+    "scriptFile": "ProductCatalogue.Function.dll",
+    "entryPoint": "ProductCatalogue.Function.ProcessOrderFunction.RunAsync",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "queueMessage",
+        "direction": "In",
+        "type": "serviceBusTrigger",
+        "dataType": "String",
+        "queueName": "orders",
+        "connection": "ServiceBusConnection",
+        "cardinality": "One",
+        "properties": {}
+      },
+      {
+        "name": "ReceiptContent",
+        "direction": "Out",
+        "type": "blob",
+        "dataType": "String",
+        "blobPath": "order-receipts/{OrderId}.txt",
+        "connection": "AzureWebJobsStorage",
+        "properties": {}
+      }
+    ]
+  }
+]
