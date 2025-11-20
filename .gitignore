@@ -1,0 +1,11 @@
+# Local config / secrets
+local.settings.json
+appsettings.json
+**/local.settings.json
+**/appsettings.json
+
+# Publish output
+publish/
+**/publish/
+
+
